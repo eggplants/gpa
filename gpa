@@ -2,7 +2,7 @@
 cal(){ echo "scale=2;($1*4.3 + $2*4.0 + $3*3.0 + $4*2.0)/($1+$2+$3+$4+$5)"|bc;}
 
 zzz(){ z=`echo $@|tr " " "+"|bc`
-       if [ $z -eq 0 ];then
+       if [ "$z" = "0" ];then
         echo "うーん、乳飲み子かな？ｗ";exit
        fi
 }
